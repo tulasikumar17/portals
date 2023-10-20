@@ -1,0 +1,80 @@
+<div class="container-fluid g-0">
+    <app-header (sideNavToggled)="sideNavStatus = $event;"></app-header>
+  
+    <main>
+      <app-sidenav  [sideNavStatus]="sideNavStatus" [ngClass]="
+      {'app-sidenav-open': sideNavStatus}"></app-sidenav>
+      
+      <div class="display-area p-3" [ngClass]="
+      {'display-area-shrink': sideNavStatus}">
+      <div>
+        <mat-card-actions style="display: flex;flex-direction: column;min-height: 50px; max-height: 2ex;">
+          <h1 style="top: 2px;font-weight: 500; font-size: 30px;">Credit Debit Memo</h1>
+        </mat-card-actions>
+      </div>
+      <mat-card class="card">
+        <div style="overflow-x:auto;">
+            <table id="users">
+                <tr id="heading">
+                 <th>Vendor</th>
+                 <th>Material Num</th>
+                 <th>Plant</th>
+                 <th>Base Unit</th>
+                 <th>Company code</th>
+                 <th>Doc Num</th>
+                 <th>Fiscal Year</th>
+                 <th>Num of item</th>
+                 <th>Clearing Date</th>
+                 <th>Account type</th>
+                 <th>Indicator</th>
+                </tr>
+                 <tr *ngFor ="let value of vencdmemo['Envelope']['Body']['ZTUL_VEN_CD.Response']['ZCREDIT']['item']">           
+                 <td style="font-size: 20px;">{{value.KUNNR}}</td>
+                 <td style="font-size: 20px;">{{value.MATNR}}</td>
+                 <td style="font-size: 20px;">{{value.WERKS}}</td>
+                 <td style="font-size: 20px;">{{value.MEINS}}</td>
+                 <td style="font-size: 20px;">{{value.BUKRS}}</td>
+                 <td style="font-size: 20px;">{{value.BELNR}}</td>
+                 <td style="font-size: 20px;">{{value.GJAHR}}</td>
+                 <td style="font-size: 20px;">{{value.BUZEI}}</td>
+                 <td style="font-size: 20px;">{{value.AUGDT}}</td>
+                 <td style="font-size: 20px;">{{value.KOART}}</td>
+                 <td style="font-size: 20px;">{{value.XBILK}}</td>
+                 
+             </tr>
+         </table>
+         <br><br>
+         <table id="users">
+          <tr id="heading">
+            <th>Vendor</th>
+            <th>Material Num</th>
+            <th>Plant</th>
+            <th>Base Unit</th>
+            <th>Company code</th>
+            <th>Doc Num</th>
+            <th>Fiscal Year</th>
+            <th>Num of item</th>
+            <th>Clearing Date</th>
+            <th>Account type</th>
+            <th>Indicator</th>
+          </tr>
+           <tr *ngFor ="let value of vencdmemo['Envelope']['Body']['ZTUL_VEN_CD.Response']['ZDEBIT']['item']">           
+           <td style="font-size: 20px;">{{value.KUNNR}}</td>
+           <td style="font-size: 20px;">{{value.MATNR}}</td>
+           <td style="font-size: 20px;">{{value.WERKS}}</td>
+           <td style="font-size: 20px;">{{value.MEINS}}</td>
+           <td style="font-size: 20px;">{{value.BUKRS}}</td>
+           <td style="font-size: 20px;">{{value.BELNR}}</td>
+           <td style="font-size: 20px;">{{value.GJAHR}}</td>
+           <td style="font-size: 20px;">{{value.BUZEI}}</td>
+           <td style="font-size: 20px;">{{value.AUGDT}}</td>
+           <td style="font-size: 20px;">{{value.KOART}}</td>
+           <td style="font-size: 20px;">{{value.XBILK}}</td>
+           
+       </tr>
+   </table>
+        </div>
+    </mat-card>
+      </div>
+    </main>
+  </div>
