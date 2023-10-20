@@ -1,0 +1,8 @@
+.content-body{
+    min-height: 100%;
+    padding: 60px 1rem;
+    background: url('pic/back.jpg');
+    background-size: 1650px 1000px;
+    display: block;
+    
+}
