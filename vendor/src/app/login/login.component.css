@@ -1,0 +1,62 @@
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: none;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo{
+    margin-top: 5px;
+    margin-left: 10px;
+    font-size: 2em;
+    color: white;
+    user-select: none;
+}
+
+
+.nav a{
+    position: relative;
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: 500;
+
+    margin-right: 100px;
+}
+
+
+
+mat-card{
+    max-width: 550px;
+    margin: 12em auto;
+    text-align: center;
+    padding-top: 0;
+    max-height: 600px;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    color: rgba(0,0,0,.87);
+}
+.header{
+    text-align: center;
+}
+
+.full-width{
+    width: 222px;
+}
+#size{
+    width: 10px;
+}
+
+.but1{
+    border-radius: 15%;
+    background-color: #000000;
+}
+
+.material-icons {
+    cursor: pointer;
+}
