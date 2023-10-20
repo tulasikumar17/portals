@@ -1,0 +1,39 @@
+
+<header>
+    <h1 class="logo">
+        Kaar Technologies
+    </h1>
+    <nav class="nav">
+    <a href="#">About</a>
+    </nav>
+</header>
+<mat-card>
+    <mat-card-content>
+        <div class="wrap">
+        <div class="header">
+            <h2>LOGIN</h2>
+        </div>
+        <form  name="loginForm" [formGroup]="loginForm">
+            <div class="email-input">
+                <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>User ID</mat-label>
+                    <input matInput type="text" class="mytext" formControlName="user" name="user" [(ngModel)]="user1" placeholder="User Id" />
+                    <!--<mat-error *ngIf="loginForm.controls['email'].errors?.['required']">Username is required</mat-error>-->
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width1" appearance="outline">
+                    <mat-label>Password</mat-label>
+                    <input matInput type='password' [type]="hide ? 'password':'text'" class="mytext" formControlName="pass" name="pass" [(ngModel)]="pass1"/>
+                    <i class="material-icons" #size matSuffix (click)="hide = !hide">
+                        {{hide ? 'visibility':'visibility_off'}}
+                    </i>
+                    <mat-error *ngIf="loginForm.controls['pass'].errors?.['required']">Password is required</mat-error>
+                </mat-form-field>
+                
+            </div>
+            <button mat-raised-button color="primary" type="submit" color="primary" (click)="onLogin()">Login</button>
+        </form>
+    </div>
+    </mat-card-content>
+</mat-card>
