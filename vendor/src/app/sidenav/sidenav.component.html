@@ -1,0 +1,39 @@
+<div class="side-nav-content">
+  <ul class="nav-list" [ngClass]="{'nav-list-open': sideNavStatus}">
+    <div style="padding-bottom: 18px;">
+      <p style="display: inline" class="fa-solid fa-house fa-2x" id="img"></p>
+      <p style="display: inline; padding-left: 25px; color: white; font-size: 20px; cursor: pointer;" (click)="home()">Home</p>
+    </div>
+    <div style="padding-bottom: 10px;">
+      <p style="display: inline" class="fa-solid fa-user fa-2x" id="img"></p>
+      <p style="display: inline; padding-left: 30px; color: white; font-size: 20px; cursor: pointer;" (click)="prof()">Profile</p>
+    </div>
+    <div style="padding-bottom: 10px;">
+      <p style="display: inline" class="fa-solid fa-list fa-2x" id="img"></p>
+      <p style="display: inline; padding-left: 25px; color: white; font-size: 20px; cursor: pointer;" (click)="quot()">Quotation</p>
+    </div>
+    <div style="padding-bottom: 10px;">
+      <p style="display: inline" class="fa-solid fa-money-check fa-2x" id="img"></p>
+      <p style="display: inline; padding-left: 23px; color: white; font-size: 20px; cursor: pointer;" (click)="pu_o()">Purchase Order</p>
+    </div>
+    
+    <div style="padding-bottom: 10px;">
+      <p style="display: inline" class="fa-solid fa-receipt fa-2x" id="img"></p>
+      <p style="display: inline; padding-left: 32px; color: white; font-size: 20px; cursor: pointer;" (click)="goods()">Goods Receipt</p>
+    </div>
+    <div style="padding-bottom: 10px;">
+      <p style="display: inline" class="fa-solid fa-file-invoice fa-2x" id="img"></p>
+      <p style="display: inline; padding-left: 32px; color: white; font-size: 20px; cursor: pointer;" (click)="inv()">Invoice Details</p>
+    </div>
+    <div style="padding-bottom: 15px;">
+      <p style="display: inline" class="fa-solid fa-credit-card fa-2x" id="img"></p>
+      <p style="display: inline; padding-left: 23px; color: white; font-size: 20px; cursor: pointer;" (click)="cdmemo()">Credit Debit Memo</p>
+    </div>
+    <div style="padding-bottom: 10px;">
+      <p style="display: inline" class="fa-solid fa-money-bill fa-2x" id="img"></p>
+      <p style="display: inline; padding-left: 22px; color: white; font-size: 20px; cursor: pointer;" (click)="payage()">Payments & Aging</p>
+    </div>
+    
+  </ul>
+
+</div>
